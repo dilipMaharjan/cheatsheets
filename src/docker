@@ -40,3 +40,10 @@ System: ubutu 16.04 LTS
 	-provide password
 17.Push the image to docker hub
 	-docker push crazdrms/cowsay
+18.Use official container
+	- docker pull redis
+19.Start up redis
+	-docker run --name myredis -d redis #-d indicates run redis in background
+20. Run redis cli
+	-docker run --rm -it --link myredis:redis redis /bin/bash
+	-redis-cli -h redis -p 6379
