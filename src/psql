@@ -1,0 +1,12 @@
+1.Create database with user
+    create database db_name owner user_name
+2.List databases
+    \l
+3.Select database
+    \c db_name
+4.Describe schema
+    \d
+5.Create user
+    create user user_name
+6.Set user password
+    alter user user_name with password 'yourpassword'

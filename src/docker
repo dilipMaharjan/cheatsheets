@@ -1,0 +1,42 @@
+System: ubutu 16.04 LTS
+
+1.Install docker
+	-curl -sSL https://get.docker.com |wget or sh -q0- https://get.docker.com |sh 
+2.Don't use root user but add user to group
+	sudo usermod -aG devops
+3.Check docker version
+	-docker version
+4.Check if docker installed correctly
+	-docker run debian echo"Hello docker"
+5.To use shell inside a container
+	-docker run -i -t debian /bin/bash
+5.Change hostname
+ 	-docker run -h CONTAINER -i -t debian /bin/bash
+6. To see all the running container
+	-docker ps
+7.More info on container
+	docker inspect naughty_bhabha
+8.Filter information
+	docker insepect naughty_bhabha |grep IPAddress
+9.List changes in the container
+	-docker diff naughty_bhabha
+10. Container logs
+	-docker logs naughty_bhabha
+11.Remove container
+	docker rm naughty_bhabha
+12.Build Container
+	-docker run -it --name cowsay --hostname cowsay debian bash
+13.Turn it into image
+	-docker commit cowsay test/cowsayimage(containername repositoryname/imagename
+14.Creating image from dockerfile
+	-create a folder
+	-create a docker file with name Dockerfile and specify base image(debian:version) ,RUN command to install
+	-docker build -t test/cowsay-dockerfile .
+15.create an account at docker hub
+	-go to docker hub and register
+16.Login to dockerhub
+	-docker login
+	-provide username
+	-provide password
+17.Push the image to docker hub
+	-docker push crazdrms/cowsay
