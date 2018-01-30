@@ -47,3 +47,7 @@ System: ubutu 16.04 LTS
 20. Run redis cli
 	-docker run --rm -it --link myredis:redis redis /bin/bash
 	-redis-cli -h redis -p 6379
+21.Build with no cache
+	- docker build container_id --no-cache
+22. Connecting containers to the world
+	- docker run -d -p 8000:80 nginx #-d run in background detached, -p specifies port
