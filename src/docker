@@ -51,3 +51,11 @@ System: ubutu 16.04 LTS
 	- docker build container_id --no-cache
 22. Connecting containers to the world
 	- docker run -d -p 8000:80 nginx #-d run in background detached, -p specifies port
+21.Build with no cache
+	- docker build container_id --no-cache
+22. Connecting containers to the world
+	- docker run -d -p 8000:80 nginx #-d run in background detached, -p specifies port
+23. Stopping,removing,mounting current container
+	- docker stop $(docker ps -lq)
+	- docker rm $(docker ps -lq)
+	-docker run -d -p 5000:5000 -v "$PWD" /app:/app identidock
