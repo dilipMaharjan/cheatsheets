@@ -59,3 +59,9 @@ System: ubutu 16.04 LTS
 	- docker stop $(docker ps -lq)
 	- docker rm $(docker ps -lq)
 	-docker run -d -p 5000:5000 -v "$PWD" /app:/app identidock
+24.Install docker-compose
+	-sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+25.Apply executable permission to binary
+	-sudo chmod +x /usr/local/bin/docker-compose
+26.Check docker-compose version
+	-docker-compose --version
