@@ -3,7 +3,7 @@ System: ubutu 16.04 LTS
 1.Install docker
 	-curl -sSL https://get.docker.com |wget or sh -q0- https://get.docker.com |sh 
 2.Don't use root user but add user to group
-	sudo usermod -aG devops
+	sudo usermod -aG docker devops
 3.Check docker version
 	-docker version
 4.Check if docker installed correctly
@@ -59,6 +59,9 @@ System: ubutu 16.04 LTS
 	- docker stop $(docker ps -lq)
 	- docker rm $(docker ps -lq)
 	-docker run -d -p 5000:5000 -v "$PWD" /app:/app identidock
+------------------------------------------------------------------------
+Docker composer installation
+
 24.Install docker-compose
 	-sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 25.Apply executable permission to binary
@@ -67,12 +70,11 @@ System: ubutu 16.04 LTS
 	-docker-compose --version
 --------------------------------------------------------------------------
 docker setup in ubuntu 17.10
-sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88
 
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu zesty stable"
-
-sudo apt-get update
-sudo apt-get install docker-ce
+27.sudo apt-get update
+28.sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+29.curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+30.sudo apt-key fingerprint 0EBFCD88
+31.sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu zesty stable"
+32.sudo apt-get update
+33.sudo apt-get install docker-ce
