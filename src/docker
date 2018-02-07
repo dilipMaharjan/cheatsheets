@@ -59,22 +59,28 @@ System: ubutu 16.04 LTS
 	- docker stop $(docker ps -lq)
 	- docker rm $(docker ps -lq)
 	-docker run -d -p 5000:5000 -v "$PWD" /app:/app identidock
+24. Fetch Docker information in system
+	-docker system info #provides compelte docker info
+	-docker system df -v #disk usage 
+	-docker system devents
+	-docker system prune #removes unused data
 ------------------------------------------------------------------------
 Docker composer installation
 
-24.Install docker-compose
+1.Install docker-compose
 	-sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-25.Apply executable permission to binary
+2.Apply executable permission to binary
 	-sudo chmod +x /usr/local/bin/docker-compose
-26.Check docker-compose version
+3.Check docker-compose version
 	-docker-compose --version
 --------------------------------------------------------------------------
 docker setup in ubuntu 17.10
 
-27.sudo apt-get update
-28.sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
-29.curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-30.sudo apt-key fingerprint 0EBFCD88
-31.sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu zesty stable"
-32.sudo apt-get update
-33.sudo apt-get install docker-ce
+1.sudo apt-get update
+2.sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+3.curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+4.sudo apt-key fingerprint 0EBFCD88
+5.sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu zesty stable"
+6.sudo apt-get update
+7.sudo apt-get install docker-ce
+
