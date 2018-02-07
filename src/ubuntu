@@ -1,0 +1,15 @@
+
+1.Persist after reboot
+
+sudo systemctl enable service_name
+sudo systemctl disable service_name
+sudo systemctl status service_name
+sudo systemctl show service_name #show all the information about service
+
+2.Temporary i.e does not persist after reboot
+
+sudo systemctl start service_name
+sudo systemctl stop service_name
+sudo systemctl restart service_name
+sudo systemctl reload service_name 
+sudo systemctl status service_name 
