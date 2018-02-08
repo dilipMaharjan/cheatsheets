@@ -1,0 +1,4 @@
+1.Rename current branch 
+    - git branch -m <newname>
+2.Rename any branch 
+    - git branch -m <oldname> <newname>
