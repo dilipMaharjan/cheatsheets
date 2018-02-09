@@ -1,0 +1,13 @@
+1.Check status
+    - service nginx status
+2.Stop nginx
+    - sudo service nginx stop 
+3.Start nginx
+    - sudo service nginx start 
+4. Reload nginx
+    - service nginx reload
+
+5.Find which port is nginx listening to
+    - sudo netstat -ntlp |grep nginx
+6.List nginx process
+    -ps -ef --forest |grep nginx
