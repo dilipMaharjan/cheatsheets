@@ -64,6 +64,8 @@ System: ubutu 16.04 LTS
 	-docker system df -v #disk usage 
 	-docker system devents
 	-docker system prune #removes unused data
+25. Creating network 
+	-docker network create -d bridge 
 ------------------------------------------------------------------------
 Docker composer installation
 
