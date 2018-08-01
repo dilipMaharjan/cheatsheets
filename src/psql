@@ -10,3 +10,5 @@
     create user user_name
 6.Set user password
     alter user user_name with password 'yourpassword'
+7.Connect to postgres database from terminal
+    sudo -u postgres psql
